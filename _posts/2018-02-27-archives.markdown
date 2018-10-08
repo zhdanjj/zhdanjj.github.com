@@ -1,0 +1,15 @@
+---
+layout: post
+title:  "Архивы в linux"
+---
+
+## zip
+Упаковка – `zip *`  
+Распаковка `unzip archive.zip`  
+Ключ `-d` – указать директорию для распаковки (по умолчанию в текущую).
+
+## tar
+Упаковка – `tar -cvzf archive.tar.gz ~/files`  
+Для `.tar.gz` перед f добавить ключ `-z`  
+Для `.tar.bz2` – `-j`  
+Распаковка .tar – `tar -xvf <filename>`
