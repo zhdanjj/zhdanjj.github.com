@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Конфигурация AwesomeWM 4"
+tags: [linux]
 ---
 
 ## Установка

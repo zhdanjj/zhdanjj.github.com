@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "Bash хоткеи"
+tags: [linux]
 ---
 
 # Навигация
