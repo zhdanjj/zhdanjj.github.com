@@ -1,0 +1,39 @@
+---
+layout: post
+title:  "xclip"
+tags: [linux]
+---
+
+## Использование
+`xclip -selection <x>`, где `<x>` - primary, secondary или clipboard
+
+`primary` - в него вставляется текст, который был просто выделен и вставляется
+по нажатию на колесо мыши.
+
+`clipboard` - то, что принято считать буфером обмена в Windows. 
+В него вставляется текст по нажатию Ctrl-c или в контекстных меню.
+
+Ключи и значения можно сокращать, если их значение остаётся недвусмысленным.
+
+## Примеры 
+```bash
+# Скопировать в clipboard
+echo 'some text' | xclip -sel clip
+
+# Скопировать в оба буфера
+echo 'shit' | xclip -f -sel p | xclip -sel c
+
+# Вывести содержимое буфера clipboard
+xclip -o -sel c
+```
+
+## Примечания
+В Chromium при копировании с помощью Ctrl-c текст пишется и в `primary`, и в
+`clipboard` буферы, вставляемый текст берётся из `clipboard`. 
+
+Gnome terminal при выделении и копировании как и Chromium пишет в оба буфера,
+но вставляет из `primary`.
+
+Vim при копировании в регистр `*` пишет в primary, `+` - в
+`clipboard`.
+
