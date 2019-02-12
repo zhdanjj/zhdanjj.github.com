@@ -4,6 +4,16 @@ title:  "Архивы в linux"
 tags: [linux]
 ---
 
+## drtx
+Распаковка tar, zip (включая самораспаковывающиеся .exe),
+cpio,  rpm,  deb,  gem,  7z,  cab,  rar, and InstallShield).
+Обеспечивает единообразное поведение – содержимое архива
+будет находиться в папке с именем архива. Также drtx будет проверять,
+что владелец имеет права на чтение и запись файлов.
+```bash
+$ dtrx coreutils-5.*.tar.gz
+```
+
 ## zip
 Упаковка – `zip *`  
 Распаковка `unzip archive.zip`  
@@ -14,3 +24,6 @@ tags: [linux]
 Для `.tar.gz` перед f добавить ключ `-z`  
 Для `.tar.bz2` – `-j`  
 Распаковка .tar – `tar -xvf <filename>`
+
+## 7z
+Распаковка – `7z x PACKAGE.7z`

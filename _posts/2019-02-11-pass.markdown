@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "Pass: The Standard Unix Password Manager"
+tags: [linux]
+---
+
+<https://www.passwordstore.org/>
+
+TODO: про ключи, утилиты gpg
+
+`pass generate [ --no-symbols, -n ] [ --clip, -c ] [ --in-place, -i | --force, -f ] pass-name [pass-length]`  
+`--in-place` - заменить если существует  
+`--clip` - скопировать не выводя
+
