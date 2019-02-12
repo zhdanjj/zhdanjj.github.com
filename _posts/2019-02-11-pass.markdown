@@ -6,9 +6,27 @@ tags: [linux]
 
 <https://www.passwordstore.org/>
 
+## Установка
+`sudo apt install pass`
+
+## Экспорт на другую машину
+Экспортировать ключ командой
+`gpg --export-secret-keys > secret.key`
+На целевой машине `gpg --import secret.key`
+Перенести .password-store в домашний каталог.
+
+На ubuntu 16.04 была проблема с экспортом или генерацией. Что-то связанное с тем,
+что gpg была первой версии, а сам pass использовал gpg2. Решалась, вроде
+использованием при генерации ключей непосредственно gpg2.
+
 TODO: про ключи, утилиты gpg
 
 `pass generate [ --no-symbols, -n ] [ --clip, -c ] [ --in-place, -i | --force, -f ] pass-name [pass-length]`  
 `--in-place` - заменить если существует  
 `--clip` - скопировать не выводя
+
+`insert [ --echo, -e | --multiline, -m ] [ --force, -f ] pass-name`
+Можно `add`
+`--echo` - спрашивать пароль один раз, показывать вводимые символы.
+`--multiline` - считывать ввод до EOF или Ctrl+D. 
 
