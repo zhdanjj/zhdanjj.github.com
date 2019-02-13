@@ -82,3 +82,14 @@ setxkbmap -option "grp:caps_toggle"
 
 ## Менеджер сети
 Добавить `nm-applet` в автозагрузку
+
+## Иконка батареи
+Использовал <https://github.com/valr/cbatticon/>
+Для сборки на ubuntu 18.04 использовал:
+```bash
+sudo apt install build-essential libgtk-3-dev libnotify-dev
+cd cbatticon
+make
+sudo make install
+```
+
