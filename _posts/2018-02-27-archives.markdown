@@ -4,7 +4,7 @@ title:  "Архивы в linux"
 tags: [linux]
 ---
 
-## drtx
+## dtrx - do the right extraction
 Распаковка tar, zip (включая самораспаковывающиеся .exe),
 cpio,  rpm,  deb,  gem,  7z,  cab,  rar, and InstallShield).
 Обеспечивает единообразное поведение – содержимое архива
