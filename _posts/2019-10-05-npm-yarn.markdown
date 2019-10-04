@@ -1,0 +1,63 @@
+---
+layout: post
+title:  "NPM/Yarn cheat sheet"
+tags: [js]
+---
+
+## Создание `package.json`
+
+В интерактивном режиме:
+```bash
+npm init
+yarn init
+```
+
+Без вопросов:
+```bash
+npm init -f
+yarn init --yes
+```
+
+## Установка зависимостей из `package.json`
+```bash
+npm i
+npm install
+yarn
+```
+
+## Виды зависимостей
+- `dependencies` - runtime зависимости
+- `devDependencies` - утилиты для конвертации, минификации, оптимизации и т. п.
+- `peerDependencies` (вроде только в yarn) - нужно авторам пакетов
+- `optionalDependencies` - если что-то не установится, то ошибки не будет
+
+## Установка пакета без добавления в `package.json`
+Бывает нужно для тестов.  В `yarn` опции нет, авторы аргументируют тем, что такие действия могут иметь хуёвые последствия. Типа если потом репу с проектом склонировать ещё где-то, то после установки зависимостей код может отвалиться.
+```bash
+npm i <package>
+npm install <package>
+npm add <package>
+# с версии 5 с ключём --no-save
+```
+
+## Установка с указанием зависимостей
+`yarn` по-умолчанию добавляет в `dependencies`
+`npm` только с 5 версии
+```bash
+# в dependencies
+npm i <package>
+yarn add <package>
+# в devDependencies
+npm i --save-dev <package>
+npm i -D <package>
+yarn add --dev
+yarn add -D
+# в optionalDependencies
+npm i --save-optional <package>
+npm i -O <package>
+yarn add --optional <package>
+yarn add -O <package>
+```
+
+TODO: дописать про глобальную установку
+и указание куда ставить, чтобы не использовать sudo
